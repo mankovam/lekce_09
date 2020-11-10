@@ -1,0 +1,164 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+
+/* -------------------------------------------------- */
+
+/* ------------------------------- */
+/* ----- DOLE BUDE TVOJE CSS ----- */
+/* ------------------------------- */
+
+/*
+Poměrná velikost písma
+----------------------
+název: 1.2 (1.75) rem | 1.5 (2) rem | 1.75 (3) rem
+meta: 0.8rem
+padding: O.5rem | 1.25rem
+min-height: 90 (200) | 150 (250) | 200 (400)
+*/
+
+:root {
+    --recipe-height: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+}
+
+.recept {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    min-height: var(--recipe-height);
+    padding: 0.5rem;
+    background-color: #999;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid #fff;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        var(--bg-recept, url('images/kucharka.svg')); /* za čárkou je výchozí hodnota, když --bg-recept není definováno */
+}
+
+.recept-nazev {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.recept-meta {
+    display: flex;
+    font-size: 0.8rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.recept-komentare {
+    margin-left: auto;
+}
+
+.recept--hlavni {
+    min-height: calc(var(--recipe-height)*2);
+}
+
+.recept--salat {
+    --bg-recept: url('images/salat.jpg');
+}
+
+.recept--chlebicek {
+    --bg-recept: url('images/chlebicek.jpg');
+}
+
+.recept--tacos {
+    --bg-recept: url('images/tacos.jpg');
+}
+
+.recept--cizrna {
+    --bg-recept: url('images/cizrna.jpg');
+}
+
+.recept--burger {
+    --bg-recept: url('images/burger.jpg');
+
+}
+
+@media screen and (min-width: 500px) {
+
+    :root {
+        --recipe-height: 150px;
+    }
+
+    .recepty {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .recept--hlavni {
+        width: 100%;
+    }
+
+    .sloupec {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        border-right: 1px solid #fff;
+    }
+
+    .sloupec:last-child {
+        border: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    :root {
+        --recipe-height: 200px;
+    }
+
+    .recept--hlavni,
+    .sloupec {
+        flex-basis: calc(100%/3);
+    }
+
+    .recept--hlavni {
+        border-right: 1px solid #fff;
+    }
+
+    .recept {
+        padding: 1.25rem;
+    }
+
+    .recept-nazev {
+        font-size: 1.75rem;
+    }
+
+    .recept--hlavni .recept-nazev {
+        font-size: 3rem;
+    }
+
+    .recept-meta {
+        font-size: 1rem;
+    }
+
+    .recept-rubrika::after {
+        content: '🏷';
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    .recept-komentare::before {
+        content: '🗨';
+        margin-right: 0.15rem;
+    }
+}

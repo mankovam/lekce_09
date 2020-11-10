@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-bottom: 2px solid currentColor;
+    color: hsl(266, 76%, 60%);
+}
+
+.icon {
+    width: 4rem;
+}
+
+.icon-bg {
+    fill: currentColor;
+}
+
+.icon:hover .icon-bg {
+    fill:hsl(120, 50%, 50%);
+}
+
+.icon:hover .icon-plane {
+    fill: hsl(266, 76%, 60%);
+    transform: rotate(135deg);
+    transform-origin: center;
+    transition: fill 400ms, transform 600ms 400ms;
+}

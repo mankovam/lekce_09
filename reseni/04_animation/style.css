@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: silver;
+}
+
+.icon {
+    width: 20vw;
+}
+
+.icon:hover .icon-plane {
+    animation-name: spin;
+}
+
+.icon-plane {
+    transform-origin: center;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes spin {
+
+    from {
+        transform:rotate(-15deg)
+    }
+
+    50% {
+        transform: rotate(135deg);
+        fill: #fff;
+    }
+
+    75% {
+        fill: cornflowerblue;
+    }
+
+    to {
+        transform: rotate(135deg) translate(-130%,10%) scale(0.25);
+    }
+}

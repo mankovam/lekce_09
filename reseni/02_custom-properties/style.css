@@ -1,0 +1,118 @@
+:root {
+    box-sizing: border-box;
+    --primary-hue: 45;
+    --primary: hsla(var(--primary-hue), 50%, 50%, 1);
+    --primary-light: hsla(var(--primary-hue), 50%, 70%, 1);
+    --primary-lighter: hsla(var(--primary-hue), 50%, 70%, 0.3);
+    --primary-dark: hsla(var(--primary-hue), 50%, 15%, 1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary-lighter);
+    font-family: sans-serif;
+    color: var(--primary-dark)
+}
+
+header {
+    min-height: 300px;
+    padding: 3rem;
+    background-image: url('https://picsum.photos/1200/300');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    max-width: 60em;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+main>img {
+    display: block;
+    margin: 1rem auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: serif;
+    color: var(--primary);
+    text-shadow: 0 0 3px var(--primary-dark);
+}
+
+h2,
+h3 {
+    color: var(--primary-dark);
+    clear: left;
+    clear: both;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light);
+    border: 3px solid var(--primary);
+    border-radius: 6px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--primary);
+    color: #fff;
+    transition: 150ms;
+    outline: none;
+}
+
+section {
+    display: flow-root;
+    background-color: var(--primary-light);
+    border-bottom: 1px dotted var(--primary-dark);
+    padding: 0 1rem;
+    margin: 0 -1rem;
+    text-align: left;
+}
+
+section:last-child {
+    border: 0;
+}
+
+section img {
+    float: right;
+    margin-bottom: 1em;
+    width: 150px;
+    height: auto;
+}
+
+section:nth-child(odd) img {
+    float: left;
+    margin-right: 1em;
+}
+
+section:nth-child(even) img {
+    margin-left: 1rem;
+}
+
+img {
+    max-width: 100%;
+}

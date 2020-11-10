@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+	<style>
+		/* CSS se dá vložit přímo do SVG – stejně jako to už známe z HTML.
+		   Takto vytvoříte animovanou ikonu, která se bude hýbat, i když ikonu vložíte do stránky jako img. */
+		path {
+			transform-origin: center;
+			animation-name: spin;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-out;
+		}
+
+		@keyframes spin {
+
+			from {
+				transform: rotate(-15deg)
+			}
+
+			50% {
+				transform: rotate(135deg);
+				fill: #fff;
+			}
+
+			75% {
+				fill: cornflowerblue;
+			}
+
+			to {
+				transform: rotate(135deg) translate(-130%, 10%) scale(0.25);
+			}
+		}
+	</style>
+	<circle fill="hsl(120, 50%, 50%)" cx="35" cy="35" r="35"/>
+	<path fill="#fff" d="M44.7,39.9l-6.9-6.9l16.7-12.5l-4.9-4.9l-20.8,8.3l-6.6-6.6c-1.9-1.9-4.5-2.3-5.9-1c-1.3,1.3-0.9,4,1,5.9 l6.6,6.6l-8.3,20.8l4.9,4.9l12.5-16.7l6.9,6.9v9.7h4.9l2.4-7.3l7.3-2.4v-4.9L44.7,39.9L44.7,39.9z"/>
+</svg>
