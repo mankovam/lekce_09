@@ -8,15 +8,11 @@ podzim 2020, Praha
 
 #### Cvičení 1
 
+1. Otevři si cvičení [01_svg](podklady/01_svg/).
 1. Vlož ikonu letadla do stránky.
 1. Zmenši ikonu na 20 % šířky stránky.
 1. Vycentruj ikonu.
 1. Změň barvu kruhového pozadí ikony.
-
-note:
-
-- otevři si cvičení O1_svg/
-- Co kdybychom chtěli měnit barvu pozadí na při najetí myši?
 
 ---
 
@@ -59,6 +55,7 @@ note:
 
 Vytvořené barvy použijeme na prvky
 
+1. Otevři si cvičení [02_custom-properties](podklady/02_custom-properties/).
 1. Pozadí stránky: světlejší průsvitnou
 1. Písmo stránky: tmavou barvou
 1. Hlavní nadpis: primární, stín tmavou
@@ -84,6 +81,7 @@ note:
 
 Zjednodušíme zápis pro pozadí receptů.
 
+1. Otevři si cvičení [03_recepty](podklady/03_recepty/).
 1. Pro všechny recepty nastav jednotný obrázek na pozadí: gradient a proměnnou  `--bg-recipe` s výchozí hodnotou SVG obrázek kuchařky
 2. Uprav kód jednotlivých receptů: odstraň vlastnost `background-image` a nastav pro každý recept hodnotu proměnné `--bg-recipe`.
 
